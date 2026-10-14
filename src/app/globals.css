@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Brand palette sampled from the Nedivut logo. */
+@theme {
+  --color-teal-950: #082e2c;
+  --color-teal-900: #0f4643;
+  --color-teal-800: #155a56;
+  --color-teal-700: #1d6d68;
+  --color-teal-600: #2a837d;
+  --color-teal-200: #bcd8d4;
+  --color-teal-100: #dcebe8;
+  --color-teal-50: #eef5f3;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-gold-700: #8a5a1f; /* text on light backgrounds (AA contrast) */
+  --color-gold-600: #b37a36;
+  --color-gold-500: #d69d58;
+  --color-gold-300: #ebc89a;
+  --color-gold-100: #f6e7d3;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-cream: #f8f7f3;
+  --color-ink: #1d2b2a;
+  --color-muted: #52625f;
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-gold-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold tracking-[0.18em] uppercase text-gold-700;
+  }
+  .btn-gold {
+    @apply btn bg-gold-500 text-teal-950 hover:bg-gold-300;
+  }
+  .btn-teal {
+    @apply btn bg-teal-900 text-cream hover:bg-teal-800;
+  }
+  .btn-outline {
+    @apply btn border border-teal-900/25 text-teal-900 hover:bg-teal-50;
+  }
+  .btn-outline-light {
+    @apply btn border border-cream/40 text-cream hover:bg-white/10;
+  }
+  .card {
+    @apply rounded-2xl bg-white p-6 shadow-[0_1px_2px_rgba(15,70,67,0.06),0_8px_24px_-12px_rgba(15,70,67,0.18)] ring-1 ring-teal-900/5;
+  }
+  .prose-page h2 {
+    @apply mt-10 mb-3 font-display text-2xl text-teal-900;
+  }
+  .prose-page p,
+  .prose-page li {
+    @apply leading-relaxed text-ink/85;
+  }
+  .prose-page p {
+    @apply mb-4;
+  }
+  .prose-page ul {
+    @apply mb-4 list-disc space-y-1.5 pl-5;
+  }
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-ink;
+  }
+  .field-input {
+    @apply w-full rounded-xl border border-teal-900/20 bg-white px-4 py-2.5 text-ink placeholder:text-muted/70 focus:border-teal-700 focus:ring-2 focus:ring-teal-700/20 focus:outline-none aria-[invalid=true]:border-red-600;
+  }
+  .field-error {
+    @apply mt-1 text-sm text-red-700;
+  }
 }
