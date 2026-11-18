@@ -4,17 +4,18 @@ import { DonateBand, PageHero } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "FAQs",
-  description: "Answers to common questions about donating to and requesting support from Nedivut Charitable Trust.",
+  description: "Answers to common questions about donating to Nedivut Charitable Trust's programmes for children's education and requesting education support.",
 };
 
 const faqs: { group: string; items: { q: string; a: string }[] }[] = [
   {
     group: "Donations",
     items: [
+      { q: "What does Nedivut support?", a: "Nedivut is an India-based charitable trust dedicated to children's education, care and development. Our work is organised into four programmes: Education Support, Child Welfare & Care, Student Mentorship & Development, and Community Development & Engagement." },
       { q: "How can I donate?", a: "Use the Donate page to give by UPI, debit or credit card, net banking or other methods offered by our payment partner. Payments are processed by the gateway; Nedivut never sees or stores your card details." },
       { q: "Will I get a receipt?", a: "Yes. As soon as the payment gateway confirms your payment, a receipt is generated with a unique number. You can download it on the confirmation page and we also email it to you." },
       { q: "Is my donation tax-deductible under Section 80G?", a: "Not yet. Our receipts are donation acknowledgements. If the trust receives 80G approval, this will be stated clearly on the receipt and this answer will be updated." },
-      { q: "Can I choose where my money goes?", a: "Yes. Choose a programme on the donation form, or give to the general fund so we can direct support where it is needed most." },
+      { q: "Can I choose where my money goes?", a: "Yes. Choose one of our four programmes on the donation form (Education Support, Child Welfare & Care, Student Mentorship & Development, or Community Development & Engagement), or give to the general fund so we can direct support where it is needed most." },
       { q: "Can I donate anonymously?", a: "You can ask us not to display your name publicly. We still need your name and contact details privately to issue your receipt and meet legal requirements." },
       { q: "Something went wrong with my payment. What should I do?", a: "If money was debited but you did not see a confirmation, please wait a few minutes; the gateway confirms payments directly with us. If you still have no receipt, contact us with your transaction reference." },
     ],

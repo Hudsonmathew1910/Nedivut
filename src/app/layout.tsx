@@ -1,16 +1,28 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const heading = Fraunces({ variable: "--font-heading", subsets: ["latin"], display: "swap" });
-const body = Plus_Jakarta_Sans({ variable: "--font-body", subsets: ["latin"], display: "swap" });
+// Self-hosted (SIL Open Font License, see ./fonts) so dev and builds never
+// depend on reaching Google Fonts. Latin subset, variable weight axis.
+const heading = localFont({
+  src: "./fonts/fraunces-latin-wght-normal.woff2",
+  weight: "100 900",
+  variable: "--font-heading",
+  display: "swap",
+});
+const body = localFont({
+  src: "./fonts/plus-jakarta-sans-latin-wght-normal.woff2",
+  weight: "200 800",
+  variable: "--font-body",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `${site.name} | ${site.tagline}`, template: `%s | ${site.name}` },
+  title: { default: `${site.name} | Children's education, care and development in India`, template: `%s | ${site.name}` },
   description: site.description,
   openGraph: {
     type: "website",

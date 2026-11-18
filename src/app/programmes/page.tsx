@@ -4,17 +4,17 @@ import { ArtTile, DonateBand, PageHero } from "@/components/ui";
 import { programmes } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Programmes",
-  description: "Education support, child welfare, elder care and community development programmes of Nedivut Charitable Trust.",
+  title: "Programmes: education support, child welfare and student mentorship",
+  description: "Nedivut Charitable Trust's programmes for children's education in India: Education Support, Child Welfare & Care, Student Mentorship & Development, and Community Development & Engagement.",
 };
 
 export default function ProgrammesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Programmes"
-        title="Where your support goes"
-        intro="Our work is organised into four programmes. You can donate to any one of them, or to the general fund so that we can direct support where it is needed most."
+        eyebrow="Our programmes"
+        title="Supporting children's education, care and development"
+        intro="Nedivut Charitable Trust brings together educational support, child welfare, student mentorship and community engagement to help children learn, build confidence and pursue their aspirations. Explore our four programmes and discover how you can contribute to a child's future."
       />
 
       <div className="container-page space-y-16 py-16 sm:space-y-24 sm:py-24">
@@ -35,7 +35,7 @@ export default function ProgrammesPage() {
               </ul>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href={`/donate?purpose=${p.slug}`} className="btn-teal">
-                  Support {p.title.toLowerCase()}
+                  Donate to {p.title}
                 </Link>
                 {p.slug === "education" && (
                   <Link href="/request-support" className="btn-outline">

@@ -67,7 +67,7 @@ function drawLogo(page: PDFPage, x: number, y: number) {
 }
 
 /** Renders a donation acknowledgement PDF. Never claims 80G unless configured. */
-export async function renderReceiptPdf(d: Donation): Promise<Uint8Array> {
+export async function renderReceiptPdf(d: Donation, purposeLabel?: string | null): Promise<Uint8Array> {
   const pdf = await PDFDocument.create();
   pdf.setTitle(`Donation receipt ${d.receipt_no}`);
   pdf.setAuthor(site.legal.legalName);
@@ -95,7 +95,7 @@ export async function renderReceiptPdf(d: Donation): Promise<Uint8Array> {
   );
 
   y -= 34;
-  const purpose = defaultPurposes.find((p) => p.slug === d.purpose)?.label ?? d.purpose;
+  const purpose = purposeLabel ?? defaultPurposes.find((p) => p.slug === d.purpose)?.label ?? d.purpose;
   const paid = new Date(d.paid_at ?? d.created_at).toLocaleDateString("en-IN", {
     day: "2-digit", month: "long", year: "numeric", timeZone: "Asia/Kolkata",
   });
