@@ -5,14 +5,14 @@ import { site } from "@/lib/site";
 import { DonateForm } from "./donate-form";
 
 export const metadata: Metadata = {
-  title: "Donate",
-  description: "Donate securely to Nedivut Charitable Trust by UPI, card or net banking and receive an instant e-receipt.",
+  title: "Donate to support children's education and care",
+  description: "Donate securely to support children's education, care and development through Nedivut Charitable Trust. Give by UPI, card or net banking and receive an instant e-receipt.",
 };
 
 const assurances = [
   { title: "Secure payment", body: "Payments are processed by Razorpay, a regulated payment gateway. We never see or store your card details." },
   { title: "Instant receipt", body: "A numbered receipt is generated as soon as your payment is confirmed, and emailed to you." },
-  { title: "Your choice", body: "Give to a specific programme, or to the general fund so we can direct support where it is needed most." },
+  { title: "Your choice", body: "Give to one of our four programmes, or to the general fund so we can direct support where it is needed most." },
 ];
 
 export default async function DonatePage() {
@@ -21,8 +21,8 @@ export default async function DonatePage() {
     <>
       <PageHero
         eyebrow="Donate"
-        title="Your gift helps a young mind grow"
-        intro="Every donation, whatever its size, goes to the work of the trust: education, child welfare, elder care and community development."
+        title="Help a child learn, grow and build a brighter future"
+        intro="Your contribution supports children's education, care and development through Nedivut's programmes: Education Support, Child Welfare & Care, Student Mentorship & Development, and Community Development & Engagement."
       />
       <section className="container-page grid gap-10 py-16 sm:py-20 lg:grid-cols-[1.5fr_1fr]">
         <DonateForm purposes={purposes} />

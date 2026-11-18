@@ -26,13 +26,13 @@ export default function Home() {
       <section className="relative overflow-hidden bg-teal-900 text-cream">
         <div className="container-page grid items-center gap-12 py-16 sm:py-24 lg:grid-cols-[1.15fr_1fr]">
           <div>
-            <p className="text-xs font-semibold tracking-[0.18em] text-gold-300 uppercase">Coimbatore · Tamil Nadu</p>
+            <p className="text-xs font-semibold tracking-[0.18em] text-gold-300 uppercase">Charitable trust · India</p>
             <h1 className="mt-4 font-display text-4xl leading-[1.1] sm:text-6xl">
-              Helping young minds grow, and every life <span className="text-gold-500">flourish</span>.
+              Helping every child learn, grow and <span className="text-gold-500">flourish</span>.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/80">
-              Nedivut Charitable Trust supports students, children, elders and communities with care that is
-              accountable, personal and lasting.
+              Nedivut is an India-based charitable trust dedicated to children&apos;s education, care and development,
+              helping children continue their studies, build confidence and work towards a brighter future.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link href="/donate" className="btn-gold">
@@ -76,7 +76,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="What we do"
               title="Four programmes, one purpose"
-              intro="Education is at the heart of our work, alongside care for children, elders and the communities around them."
+              intro="Education is at the heart of our work, alongside child welfare, student mentorship and community engagement that help children learn and grow."
             />
             <Link href="/programmes" className="btn-outline self-start md:self-auto">
               All programmes

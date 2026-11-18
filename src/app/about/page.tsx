@@ -4,15 +4,15 @@ import { ArtTile, DonateBand, PageHero, SectionHeading } from "@/components/ui";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About us",
-  description: "The purpose, values and governance of Nedivut Charitable Trust, Coimbatore.",
+  title: "About us: supporting children's education in India",
+  description: "Nedivut Charitable Trust is an India-based charitable trust dedicated to children's education, care and development. Learn about our purpose, values and governance.",
 };
 
 const principles = [
   { title: "Dignity first", body: "We protect the privacy of every person we support. No beneficiary is identified publicly without informed consent." },
   { title: "Accountability", body: "Every rupee is recorded, every donation receipted, and every public figure verified before it is published." },
-  { title: "Long-term care", body: "We stay with students and families over time, because lasting change rarely happens in a single payment." },
-  { title: "Local roots", body: "We work alongside schools, colleges, volunteers and community leaders in and around Coimbatore." },
+  { title: "Long-term care", body: "We stay with students over time, because lasting change in a child's education rarely happens in a single payment." },
+  { title: "Local roots", body: "We work alongside schools, colleges, volunteers and local organisations in the communities we serve." },
 ];
 
 export default function AboutPage() {
@@ -28,8 +28,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Nedivut"
-        title="A charitable trust built on care and accountability"
-        intro="Nedivut Charitable Trust is based in Coimbatore, Tamil Nadu. We support education, child welfare, elder care and community development, so that people can grow with dignity."
+        title="Every child deserves the chance to learn, grow and shape their own future."
+        intro="Nedivut is an India-based charitable trust dedicated to children's education, care and development. Through education support, mentorship and community engagement, we help children continue their studies, build confidence and work towards a brighter future."
       />
 
       <section className="container-page grid gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:items-center">
@@ -37,12 +37,13 @@ export default function AboutPage() {
           <SectionHeading eyebrow="Our purpose" title="Why we exist" />
           <div className="prose-page mt-6">
             <p>
-              Too many capable students leave their studies because a fee falls due at the wrong moment. Too many elders live
-              without someone to check on them. Nedivut was founded to respond to needs like these: quietly, personally and
-              with care.
+              For many children in India, school fees, a lack of learning resources and limited access to guidance can
+              interrupt their education. We believe these barriers should never decide a child&apos;s future.
             </p>
             <p>
-              Our logo says it simply: a book opening into new leaves under a rising sun. Learning comes first, and growth follows.
+              Nedivut Charitable Trust exists to support children&apos;s education, well-being and personal development.
+              Through educational support, child welfare initiatives, student mentorship and community engagement, we aim
+              to help children stay in education, discover their strengths and build the skills to move forward.
             </p>
           </div>
         </div>

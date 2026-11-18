@@ -45,8 +45,8 @@ export function DonateBand() {
         <LeafPattern className="absolute -top-10 -right-10 h-64 w-64 text-teal-800" />
         <div className="relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="max-w-xl">
-            <h2 className="font-display text-3xl leading-tight">Every contribution helps a student stay in school.</h2>
-            <p className="mt-3 text-cream/75">Give securely by UPI, card or net banking and receive an instant e-receipt.</p>
+            <h2 className="font-display text-3xl leading-tight">Help a child learn, grow and build a brighter future.</h2>
+            <p className="mt-3 text-cream/75">Your contribution supports children&apos;s education, care and development through Nedivut&apos;s programmes.</p>
           </div>
           <div className="flex flex-wrap gap-3">
             <Link href="/donate" className="btn-gold">

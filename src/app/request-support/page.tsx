@@ -5,7 +5,7 @@ import { SupportForm } from "./support-form";
 
 export const metadata: Metadata = {
   title: "Request education support",
-  description: "Students, parents, guardians and referrers can request education support from Nedivut Charitable Trust.",
+  description: "Students, parents, guardians and referrers can request education support for school or college fees, books and learning costs from Nedivut Charitable Trust.",
 };
 
 const steps = [
@@ -21,7 +21,7 @@ export default function RequestSupportPage() {
       <PageHero
         eyebrow="Education support"
         title="Request support for a student's education"
-        intro="If a student is struggling to pay school or college fees or other learning costs, we would like to hear from you. Every request is reviewed carefully and kept confidential."
+        intro="Through our Education Support programme, we help students with school and college fees, books, uniforms, stationery and other learning costs. If a student is struggling to continue their studies, we would like to hear from you. Every request is reviewed carefully and kept confidential."
       />
 
       <section className="container-page grid gap-10 py-16 sm:py-20 lg:grid-cols-[1fr_1.6fr]">
