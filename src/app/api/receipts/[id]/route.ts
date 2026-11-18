@@ -1,5 +1,5 @@
 import type { NextRequest } from "next/server";
-import { getDonationForToken } from "@/lib/donations";
+import { getDonationForToken, purposeLabel } from "@/lib/donations";
 import { renderReceiptPdf } from "@/lib/receipt";
 import { isSupabaseConfigured } from "@/lib/supabase";
 
@@ -14,7 +14,7 @@ export async function GET(request: NextRequest, { params }: RouteContext<"/api/r
     return new Response("Receipt not found", { status: 404 });
   }
 
-  const pdf = await renderReceiptPdf(donation);
+  const pdf = await renderReceiptPdf(donation, await purposeLabel(donation.purpose));
   const filename = `Nedivut-receipt-${donation.receipt_no.replace(/\//g, "-")}.pdf`;
   return new Response(Buffer.from(pdf), {
     headers: {

@@ -36,6 +36,15 @@ export async function getDonationForToken(id: string, token: string): Promise<Do
   return (data as Donation | null) ?? null;
 }
 
+/**
+ * Label for a donation purpose as stored in the database. Includes inactive
+ * (retired) purposes, so old receipts keep a readable name.
+ */
+export async function purposeLabel(slug: string): Promise<string | null> {
+  const { data } = await supabaseAdmin().from("donation_purposes").select("label").eq("slug", slug).maybeSingle();
+  return (data as { label: string } | null)?.label ?? null;
+}
+
 export function receiptPath(d: Pick<Donation, "id" | "receipt_token">) {
   return `/api/receipts/${d.id}?t=${d.receipt_token}`;
 }
